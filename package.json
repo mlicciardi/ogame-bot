@@ -1,0 +1,28 @@
+{
+  "name": "ogame-bot",
+  "version": "1.0.0",
+  "repository": "git@github.com:mlicciardi/ogame-bot.git",
+  "author": "Mattia Licciardi <mattia.licciardi@gmail.com>",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "start": "node node_modules/ts-node/dist/bin.js ./src/index.ts"
+  },
+  "files": [
+    "bin",
+    "dist",
+    "package.json"
+  ],
+  "dependencies": {
+    "events": "3.0.0",
+    "puppeteer": "^2.0.0",
+    "ts-node": "³.3.0",
+    "typescript": "².5.3"
+  },
+  "devDependencies": {
+    "@types/node": "12.12.14",
+    "@types/puppeteer": "^2.0.0",
+    "puppeteer-tsd": "0.0.2"
+  }
+}
