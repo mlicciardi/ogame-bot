@@ -25,6 +25,8 @@ src/**/*.css
 !.vscode/extensions.json
 
 # misc
+yarn.lock
+yarn-errror.log
 
 # e2e
 /e2e/*.js

@@ -15,14 +15,14 @@
     "package.json"
   ],
   "dependencies": {
-    "events": "3.0.0",
+    "events": "^3.0.0",
     "puppeteer": "^2.0.0",
-    "ts-node": "³.3.0",
-    "typescript": "².5.3"
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.3"
   },
   "devDependencies": {
-    "@types/node": "12.12.14",
+    "@types/node": "^12.12.14",
     "@types/puppeteer": "^2.0.0",
-    "puppeteer-tsd": "0.0.2"
+    "puppeteer-tsd": "^0.0.2"
   }
 }

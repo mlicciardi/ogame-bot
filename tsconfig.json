@@ -2,14 +2,10 @@
   "compilerOptions": {
     "module": "commonjs",
     "moduleResolution": "node",
-    "lib": ["es2015", "dom"],
     "target": "es2017",
     "baseUrl": ".",
     "outDir": "dist",
     "allowJs": false
   },
-  "include": [
-    "src",
-    "node_modules/@types/puppeteer/index.d.ts"
-  ]
+  "include": ["node_modules/@types/puppeteer/index.d.ts"]
 }
