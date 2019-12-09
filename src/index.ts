@@ -1,23 +1,55 @@
-import { launch, Page } from 'puppeteer';
+import { launch, Page, ElementHandle } from 'puppeteer';
 
-const loginUrl = 'https://lobby.ogame.gameforge.com/en_GB/hub';
+const uni = 152;
+const lbl = 'Galatea';
 
 async function main() {
   const browser = await launch({
+    // headless: true,
     headless: false,
     args: ['--start-fullscreen'],
   });
 
   const page = await browser.newPage();
 
-  await page.goto(loginUrl, { waitUntil: 'load' });
+  await page.goto(url, { waitUntil: 'load' });
 
   await performClickOnElement(page, 'span', 'Log in');
 
-  await screenshot(page);
+  await page.focus('input[type="email"]');
+  await page.keyboard.type(usr);
 
-  await page.close();
-  browser.close();
+  await page.focus('input[type="password"]');
+  await page.keyboard.type(pwd);
+
+  await page.click('button[type="submit"]');
+  await page.waitForNavigation();
+
+  await page.click('span.serverDetails');
+
+  const ids: Array<string> = [];
+
+  console.debug('evaluate pre');
+  await page.evaluate(() => {
+    console.debug('evaluate in');
+    const elements: HTMLCollection = document.getElementsByClassName('smallplanet');
+    console.debug(elements.length);
+    for (let el of elements) {
+      console.debug(`${el.id} pushed for navigation ...`);
+      ids.push(el.id);
+    }
+  });
+
+  ids.forEach(async id => {
+    await page.click(id);
+    await page.waitForNavigation();
+    console.debug(`${id} navigated ...`);
+    await screenshot(page);
+    await page.waitFor(1000);
+  });
+
+  // await page.close();
+  // browser.close();
 }
 
 const screenshot = async (page: Page) => {
@@ -26,14 +58,14 @@ const screenshot = async (page: Page) => {
 
 const performClickOnElement = async (page: Page, tag: string, text: string) => {
   const escapedText = escapeXpathString(text);
-  const linkHandlers = await page.$x(
-    `//${tag}[contains(text(), ${escapedText})]`,
-  );
+  const linkHandlers = await page.$x(`//${tag}[contains(text(), ${escapedText})]`);
 
-  if (linkHandlers.length > 0) {
+  if (linkHandlers.length === 1) {
     await linkHandlers[0].click();
   } else {
-    throw new Error(`Link not found: ${text}`);
+    if (!linkHandlers.length) throw new Error(`linkHandlers not found: ${text}`);
+
+    throw new Error(`Multiple linkHandlers found: ${linkHandlers.length}`);
   }
 };
 
