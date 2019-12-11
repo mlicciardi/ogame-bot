@@ -1,7 +1,8 @@
 import { launch, Page, ElementHandle } from 'puppeteer';
 
-const uni = 152;
-const lbl = 'Galatea';
+const url = 'https://lobby.ogame.gameforge.com/en_GB/hub';
+const usr = 'usr';
+const pwd = 'psw';
 
 async function main() {
   const browser = await launch({
