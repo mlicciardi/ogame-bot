@@ -1,4 +1,4 @@
-import { launch, Page, ElementHandle } from 'puppeteer';
+import { launch, Page } from 'puppeteer';
 
 const url = 'https://lobby.ogame.gameforge.com/en_GB/hub';
 const usr = 'usr';
@@ -41,7 +41,7 @@ async function main() {
     }
   });
 
-  ids.forEach(async id => {
+  ids.forEach(async (id) => {
     await page.click(id);
     await page.waitForNavigation();
     console.debug(`${id} navigated ...`);
