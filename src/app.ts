@@ -1,8 +1,8 @@
 import { launch, Page } from 'puppeteer';
 
 const url = 'https://lobby.ogame.gameforge.com/en_GB/hub';
-const usr = 'usr';
-const pwd = 'psw';
+const usr = '';
+const pwd = '';
 
 async function main() {
   const browser = await launch({
@@ -27,30 +27,37 @@ async function main() {
   await page.waitForNavigation();
 
   await page.click('span.serverDetails');
+  await page.waitForNavigation();
 
-  const ids: Array<string> = [];
+  console.debug('Start...');
+  const ids: Array<any> = await page.$$eval('div.smallplanet', (anchors) => anchors);
+  console.debug(ids);
 
-  console.debug('evaluate pre');
-  await page.evaluate(() => {
-    console.debug('evaluate in');
-    const elements: HTMLCollection = document.getElementsByClassName('smallplanet');
-    console.debug(elements.length);
-    for (let el of elements) {
-      console.debug(`${el.id} pushed for navigation ...`);
-      ids.push(el.id);
-    }
-  });
+  // const elements = await page.evaluateHandle(() => {
+  //   return document.getElementsByClassName('smallplanet');
+  // });
+  // const ids: Array<string> = [];
+  // for (let el of elements) {
+  //   console.debug(`${el.id} pushed for navigation ...`);
+  //   ids.push(el.id);
+  // }
 
-  ids.forEach(async (id) => {
-    await page.click(id);
-    await page.waitForNavigation();
-    console.debug(`${id} navigated ...`);
-    await screenshot(page);
-    await page.waitFor(1000);
-  });
+  // if (!ids) {
+  //   console.debug('Ids is empty');
+  // } else {
+  //   ids.forEach(async (id) => {
+  //     await page.click(id);
+  //     await page.waitForNavigation();
+  //     console.debug(`${id} navigated ...`);
+  //     await screenshot(page);
+  //     await page.waitFor(1000);
+  //   });
+  // }
 
-  // await page.close();
-  // browser.close();
+  console.debug('Done!');
+
+  await page.close();
+  browser.close();
 }
 
 const screenshot = async (page: Page) => {
