@@ -24,8 +24,13 @@ src/**/*.css
 # !.vscode/extensions.json
 
 # misc
-yarn.lock
+.env
+
+# yarn
 yarn-errror.log
+
+# npm
+package-lock.json
 
 # e2e
 /e2e/*.js

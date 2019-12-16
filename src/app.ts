@@ -1,85 +1,30 @@
-import { launch, Page } from 'puppeteer';
+import { resolve } from 'path';
+import { config } from 'dotenv';
 
-const url = 'https://lobby.ogame.gameforge.com/en_GB/hub';
-const usr = '';
-const pwd = '';
+import { launch } from 'puppeteer';
 
-async function main() {
-  const browser = await launch({
-    // headless: true,
-    headless: false,
-    args: ['--start-fullscreen'],
-  });
+import { loadBrowserOptions } from '@app/functions/puppeteer/load-browser-options';
 
-  const page = await browser.newPage();
+import { login } from '@app/modules/login';
+import { fetchPlanetIds } from '@app/modules/empire';
 
-  await page.goto(url, { waitUntil: 'load' });
+config({ path: resolve(__dirname, '../.env') });
 
-  await performClickOnElement(page, 'span', 'Log in');
+(async () => {
+  const browser = await launch(loadBrowserOptions(process.env.ENV_DEBUG_LEVEL));
 
-  await page.focus('input[type="email"]');
-  await page.keyboard.type(usr);
+  let page = await login(browser, process.env.ENV_URL, process.env.ENV_USR, process.env.ENV_PWD);
 
-  await page.focus('input[type="password"]');
-  await page.keyboard.type(pwd);
-
-  await page.click('button[type="submit"]');
-  await page.waitForNavigation();
-
-  await page.click('span.serverDetails');
-  await page.waitForNavigation();
-
-  console.debug('Start...');
-  const ids: Array<any> = await page.$$eval('div.smallplanet', (anchors) => anchors);
-  console.debug(ids);
-
-  // const elements = await page.evaluateHandle(() => {
-  //   return document.getElementsByClassName('smallplanet');
-  // });
-  // const ids: Array<string> = [];
-  // for (let el of elements) {
-  //   console.debug(`${el.id} pushed for navigation ...`);
-  //   ids.push(el.id);
-  // }
-
-  // if (!ids) {
-  //   console.debug('Ids is empty');
-  // } else {
-  //   ids.forEach(async (id) => {
-  //     await page.click(id);
-  //     await page.waitForNavigation();
-  //     console.debug(`${id} navigated ...`);
-  //     await screenshot(page);
-  //     await page.waitFor(1000);
-  //   });
-  // }
-
-  console.debug('Done!');
-
-  await page.close();
-  browser.close();
-}
-
-const screenshot = async (page: Page) => {
-  await page.screenshot({ path: `./tmp/${Date.now()}.png` });
-};
-
-const performClickOnElement = async (page: Page, tag: string, text: string) => {
-  const escapedText = escapeXpathString(text);
-  const linkHandlers = await page.$x(`//${tag}[contains(text(), ${escapedText})]`);
-
-  if (linkHandlers.length === 1) {
-    await linkHandlers[0].click();
+  if (!page) {
+    console.error('Page is undefined. Bye!');
+    await browser.close();
   } else {
-    if (!linkHandlers.length) throw new Error(`linkHandlers not found: ${text}`);
+    console.info('Start...');
 
-    throw new Error(`Multiple linkHandlers found: ${linkHandlers.length}`);
+    const ids = await fetchPlanetIds(page);
+    console.info(ids);
+
+    console.info('Done!');
+    // browser.close();
   }
-};
-
-const escapeXpathString = (searchString: string) => {
-  const splitedQuotes = searchString.replace(/'/g, `', "'", '`);
-  return `concat('${splitedQuotes}', '')`;
-};
-
-main();
+})();
