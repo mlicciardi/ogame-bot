@@ -1,38 +1,49 @@
 import { IOGameEntity } from '@app/interfaces/ogame';
+import { OGameEntityType } from '@app/constants/ogame/types';
 
 export const RoboticsFactory: IOGameEntity = {
-  type: 'level',
+  type: OGameEntityType.Level,
   key: 'roboticsFactory',
-  selector: 'span.roboticsFactory',
   label: 'Robotics Factory',
+  selector: 'span.roboticsFactory',
+  subSelector: 'span.roboticsFactory >span.level',
+  attribute: 'data-value',
 };
 
 export const Shipyard: IOGameEntity = {
-  type: 'level',
+  type: OGameEntityType.Level,
   key: 'shipyard',
-  selector: 'span.shipyard',
   label: 'Shipyard',
+  selector: 'span.shipyard',
+  subSelector: 'span.shipyard >span.level',
+  attribute: 'data-value',
 };
 
 export const Moonbase: IOGameEntity = {
-  type: 'level',
+  type: OGameEntityType.Level,
   key: 'moonbase',
-  selector: 'span.moonbase',
   label: 'Moonbase',
+  selector: 'span.moonbase',
+  subSelector: 'span.moonbase >span.level',
+  attribute: 'data-value',
 };
 
 export const SensorPhalanx: IOGameEntity = {
-  type: 'level',
+  type: OGameEntityType.Level,
   key: 'sensorPhalanx',
-  selector: 'span.sensorPhalanx',
   label: 'Sensor Phalanx',
+  selector: 'span.sensorPhalanx',
+  subSelector: 'span.sensorPhalanx >span.level',
+  attribute: 'data-value',
 };
 
 export const JumpGate: IOGameEntity = {
-  type: 'level',
+  type: OGameEntityType.Level,
   key: 'jumpGate',
-  selector: 'span.jumpGate',
   label: 'Jump Gate',
+  selector: 'span.jumpGate',
+  subSelector: 'span.jumpGate >span.level',
+  attribute: 'data-value',
 };
 
 export const MoonFacilities = {

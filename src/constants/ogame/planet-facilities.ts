@@ -1,59 +1,76 @@
 import { IOGameEntity } from '@app/interfaces/ogame';
+import { OGameEntityType } from '@app/constants/ogame/types';
 
 export const RoboticsFactory: IOGameEntity = {
-  type: 'level',
+  type: OGameEntityType.Level,
   key: 'roboticsFactory',
-  selector: 'span.roboticsFactory',
   label: 'Robotics Factory',
+  selector: 'span.roboticsFactory',
+  subSelector: 'span.roboticsFactory >span.level',
+  attribute: 'data-value',
 };
 
 export const Shipyard: IOGameEntity = {
-  type: 'level',
+  type: OGameEntityType.Level,
   key: 'shipyard',
-  selector: 'span.shipyard',
   label: 'Shipyard',
+  selector: 'span.shipyard',
+  subSelector: 'span.shipyard >span.level',
+  attribute: 'data-value',
 };
 
 export const ResearchLaboratory: IOGameEntity = {
-  type: 'level',
+  type: OGameEntityType.Level,
   key: 'researchLaboratory',
-  selector: 'span.researchLaboratory',
   label: 'Research Laboratory',
+  selector: 'span.researchLaboratory',
+  subSelector: 'span.researchLaboratory >span.level',
+  attribute: 'data-value',
 };
 
 export const AllianceDepot: IOGameEntity = {
-  type: 'level',
+  type: OGameEntityType.Level,
   key: 'allianceDepot',
-  selector: 'span.allianceDepot',
   label: 'Alliance Depot',
+  selector: 'span.allianceDepot',
+  subSelector: 'span.allianceDepot >span.level',
+  attribute: 'data-value',
 };
 
 export const MissileSilo: IOGameEntity = {
-  type: 'level',
+  type: OGameEntityType.Level,
   key: 'missileSilo',
-  selector: 'span.missileSilo',
   label: 'Missile Silo',
+  selector: 'span.missileSilo',
+  subSelector: 'span.missileSilo >span.level',
+  attribute: 'data-value',
 };
 
 export const NaniteFactory: IOGameEntity = {
-  type: 'level',
+  type: OGameEntityType.Level,
   key: 'naniteFactory',
-  selector: 'span.naniteFactory',
   label: 'Nanite Factory',
+  selector: 'span.naniteFactory',
+  subSelector: 'span.naniteFactory >span.level',
+  attribute: 'data-value',
 };
 
 export const Terraformer: IOGameEntity = {
-  type: 'level',
+  type: OGameEntityType.Level,
   key: 'terraformer',
-  selector: 'span.terraformer',
   label: 'Terraformer',
+  selector: 'span.terraformer',
+  subSelector: 'span.terraformer >span.level',
+  attribute: 'data-value',
 };
 
 export const RepairDock: IOGameEntity = {
-  type: 'level',
+  type: OGameEntityType.Level,
   key: 'repairDock',
-  selector: 'span.repairDock',
   label: 'Repair Dock',
+  selector: 'span.repairDock',
+  subSelector: 'span.repairDock >span.level',
+  attribute: 'data-value',
 };
 
 export const PlanetFacilities = {

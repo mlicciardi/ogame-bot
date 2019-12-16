@@ -8,9 +8,7 @@ export const FighterLight: IOGameEntity = {
   selector: 'span.fighterLight',
   subSelector: 'span.fighterLight >span.amount',
   attribute: 'data-value',
-  requiredMetal: 3000,
-  requiredCrystal: 1000,
-  requiredDeuterium: 0,
+  inputSelector: 'input[name="fighterLight"]',
 };
 
 export const FighterHeavy: IOGameEntity = {
@@ -20,9 +18,7 @@ export const FighterHeavy: IOGameEntity = {
   selector: 'span.fighterHeavy',
   subSelector: 'span.fighterHeavy >span.amount',
   attribute: 'data-value',
-  requiredMetal: 6000,
-  requiredCrystal: 4000,
-  requiredDeuterium: 0,
+  inputSelector: 'input[name="fighterHeavy"]',
 };
 
 export const Cruiser: IOGameEntity = {
@@ -32,9 +28,7 @@ export const Cruiser: IOGameEntity = {
   selector: 'span.cruiser',
   subSelector: 'span.cruiser >span.amount',
   attribute: 'data-value',
-  requiredMetal: 20000,
-  requiredCrystal: 7000,
-  requiredDeuterium: 2000,
+  inputSelector: 'input[name="cruiser"]',
 };
 
 export const Battleship: IOGameEntity = {
@@ -44,9 +38,7 @@ export const Battleship: IOGameEntity = {
   selector: 'span.battleship',
   subSelector: 'span.battleship >span.amount',
   attribute: 'data-value',
-  requiredMetal: 45000,
-  requiredCrystal: 15000,
-  requiredDeuterium: 0,
+  inputSelector: 'input[name="battleship"]',
 };
 
 export const Battlecruiser: IOGameEntity = {
@@ -56,9 +48,7 @@ export const Battlecruiser: IOGameEntity = {
   selector: 'span.interceptor',
   subSelector: 'span.interceptor >span.amount',
   attribute: 'data-value',
-  requiredMetal: 30000,
-  requiredCrystal: 40000,
-  requiredDeuterium: 15000,
+  inputSelector: 'input[name="interceptor"]',
 };
 
 export const Bomber: IOGameEntity = {
@@ -68,9 +58,7 @@ export const Bomber: IOGameEntity = {
   selector: 'span.bomber',
   subSelector: 'span.bomber >span.amount',
   attribute: 'data-value',
-  requiredMetal: 50000,
-  requiredCrystal: 25000,
-  requiredDeuterium: 15000,
+  inputSelector: 'input[name="bomber"]',
 };
 
 export const Destroyer: IOGameEntity = {
@@ -80,9 +68,7 @@ export const Destroyer: IOGameEntity = {
   selector: 'span.destroyer',
   subSelector: 'span.destroyer >span.amount',
   attribute: 'data-value',
-  requiredMetal: 60000,
-  requiredCrystal: 50000,
-  requiredDeuterium: 15000,
+  inputSelector: 'input[name="destroyer"]',
 };
 
 export const Deathstar: IOGameEntity = {
@@ -92,9 +78,7 @@ export const Deathstar: IOGameEntity = {
   selector: 'span.deathstar',
   subSelector: 'span.deathstar >span.amount',
   attribute: 'data-value',
-  requiredMetal: 5000000,
-  requiredCrystal: 4000000,
-  requiredDeuterium: 1000000,
+  inputSelector: 'input[name="deathstar"]',
 };
 
 export const Reaper: IOGameEntity = {
@@ -104,9 +88,7 @@ export const Reaper: IOGameEntity = {
   selector: 'span.reaper',
   subSelector: 'span.reaper >span.amount',
   attribute: 'data-value',
-  requiredMetal: 85000,
-  requiredCrystal: 55000,
-  requiredDeuterium: 20000,
+  inputSelector: 'input[name="reaper"]',
 };
 
 export const Pathfinder: IOGameEntity = {
@@ -116,9 +98,7 @@ export const Pathfinder: IOGameEntity = {
   selector: 'span.explorer',
   subSelector: 'span.explorer >span.amount',
   attribute: 'data-value',
-  requiredMetal: 8000,
-  requiredCrystal: 15000,
-  requiredDeuterium: 8000,
+  inputSelector: 'input[name="explorer"]',
 };
 
 export const TransporterSmall: IOGameEntity = {
@@ -128,9 +108,7 @@ export const TransporterSmall: IOGameEntity = {
   selector: 'span.transporterSmall',
   subSelector: 'span.transporterSmall >span.amount',
   attribute: 'data-value',
-  requiredMetal: 2000,
-  requiredCrystal: 2000,
-  requiredDeuterium: 0,
+  inputSelector: 'input[name="transporterSmall"]',
 };
 
 export const TransporterLarge: IOGameEntity = {
@@ -140,9 +118,7 @@ export const TransporterLarge: IOGameEntity = {
   selector: 'span.transporterLarge',
   subSelector: 'span.transporterLarge >span.amount',
   attribute: 'data-value',
-  requiredMetal: 6000,
-  requiredCrystal: 6000,
-  requiredDeuterium: 0,
+  inputSelector: 'input[name="transporterLarge"]',
 };
 
 export const ColonyShip: IOGameEntity = {
@@ -152,9 +128,7 @@ export const ColonyShip: IOGameEntity = {
   selector: 'span.colonyShip',
   subSelector: 'span.colonyShip >span.amount',
   attribute: 'data-value',
-  requiredMetal: 10000,
-  requiredCrystal: 20000,
-  requiredDeuterium: 10000,
+  inputSelector: 'input[name="colonyShip"]',
 };
 
 export const Recycler: IOGameEntity = {
@@ -164,9 +138,7 @@ export const Recycler: IOGameEntity = {
   selector: 'span.recycler',
   subSelector: 'span.recycler >span.amount',
   attribute: 'data-value',
-  requiredMetal: 10000,
-  requiredCrystal: 6000,
-  requiredDeuterium: 2000,
+  inputSelector: 'input[name="recycler"]',
 };
 
 export const EspionageProbe: IOGameEntity = {
@@ -176,9 +148,7 @@ export const EspionageProbe: IOGameEntity = {
   selector: 'span.espionageProbe',
   subSelector: 'span.espionageProbe >span.amount',
   attribute: 'data-value',
-  requiredMetal: 0,
-  requiredCrystal: 1000,
-  requiredDeuterium: 0,
+  inputSelector: 'input[name="espionageProbe"]',
 };
 
 export const SolarSatellite: IOGameEntity = {
@@ -188,9 +158,7 @@ export const SolarSatellite: IOGameEntity = {
   selector: 'span.solarSatellite',
   subSelector: 'span.solarSatellite >span.amount',
   attribute: 'data-value',
-  requiredMetal: 0,
-  requiredCrystal: 2000,
-  requiredDeuterium: 500,
+  inputSelector: 'input[name="solarSatellite"]',
 };
 
 export const Crawler: IOGameEntity = {
@@ -200,9 +168,7 @@ export const Crawler: IOGameEntity = {
   selector: 'span.resbuggy',
   subSelector: 'span.resbuggy >span.amount',
   attribute: 'data-value',
-  requiredMetal: 2000,
-  requiredCrystal: 2000,
-  requiredDeuterium: 1000,
+  inputSelector: 'input[name="resbuggy"]',
 };
 
 export const Ships = {

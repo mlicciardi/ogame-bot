@@ -1,3 +1,3 @@
-export type OGameEntityType = 'level' | 'number';
+export type OGameEntityType = 'level' | 'amount';
 
 export type CelestialBodyType = 'planet' | 'moon';

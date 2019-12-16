@@ -1,69 +1,76 @@
 import { IOGameEntity } from '@app/interfaces/ogame';
+import { OGameEntityType } from '@app/constants/ogame/types';
 
 export const MetalMine: IOGameEntity = {
-  type: 'level',
+  type: OGameEntityType.Level,
   key: 'metalMine',
-  selector: 'span.metalMine',
   label: 'Metal Mine',
+  selector: 'span.metalMine',
+  subSelector: 'span.metalMine >span.level',
+  attribute: 'data-value',
 };
 
 export const CrystalMine: IOGameEntity = {
-  type: 'level',
+  type: OGameEntityType.Level,
   key: 'crystalMine',
-  selector: 'span.crystalMine',
   label: 'Crystal Mine',
+  selector: 'span.crystalMine',
+  subSelector: 'span.crystalMine >span.level',
+  attribute: 'data-value',
 };
 
 export const DeuteriumSynthesizer: IOGameEntity = {
-  type: 'level',
+  type: OGameEntityType.Level,
   key: 'deuteriumSynthesizer',
-  selector: 'span.deuteriumSynthesizer',
   label: 'Deuterium Synthesizer',
+  selector: 'span.deuteriumSynthesizer',
+  subSelector: 'span.deuteriumSynthesizer >span.level',
+  attribute: 'data-value',
 };
 
 export const metalStorage: IOGameEntity = {
-  type: 'level',
+  type: OGameEntityType.Level,
   key: 'metalStorage',
-  selector: 'span.metalStorage',
   label: 'metalStorage',
+  selector: 'span.metalStorage',
+  subSelector: 'span.metalStorage >span.level',
+  attribute: 'data-value',
 };
 
 export const crystalStorage: IOGameEntity = {
-  type: 'level',
+  type: OGameEntityType.Level,
   key: 'crystalStorage',
-  selector: 'span.crystalStorage',
   label: 'Crystal Storage',
+  selector: 'span.crystalStorage',
+  subSelector: 'span.crystalStorage >span.level',
+  attribute: 'data-value',
 };
 
 export const deuteriumStorage: IOGameEntity = {
-  type: 'level',
+  type: OGameEntityType.Level,
   key: 'deuteriumStorage',
-  selector: 'span.deuteriumStorage',
   label: 'Deuterium Storage',
+  selector: 'span.deuteriumStorage',
+  subSelector: 'span.deuteriumStorage >span.level',
+  attribute: 'data-value',
 };
 
 export const SolarPlant: IOGameEntity = {
-  type: 'level',
+  type: OGameEntityType.Level,
   key: 'solarPlant',
-  selector: 'span.solarPlant',
   label: 'Solar Plant',
+  selector: 'span.solarPlant',
+  subSelector: 'span.solarPlant >span.level',
+  attribute: 'data-value',
 };
 
 export const FusionPlant: IOGameEntity = {
-  type: 'level',
+  type: OGameEntityType.Level,
   key: 'fusionPlant',
-  selector: 'span.fusionPlant',
   label: 'Fusion Plant',
-};
-
-export const SolarSatellite: IOGameEntity = {
-  type: 'number',
-  key: 'solarSatellite',
-  selector: 'span.solarSatellite',
-  label: 'Solar Satellite',
-  requiredMetal: 0,
-  requiredCrystal: 2000,
-  requiredDeuterium: 500,
+  selector: 'span.fusionPlant',
+  subSelector: 'span.fusionPlant >span.level',
+  attribute: 'data-value',
 };
 
 export const PlanetSupplies = {
@@ -75,7 +82,6 @@ export const PlanetSupplies = {
   deuteriumStorage,
   SolarPlant,
   FusionPlant,
-  SolarSatellite,
 };
 
 export default PlanetSupplies;
