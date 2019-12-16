@@ -1,5 +1,5 @@
-import { PlanetComponent, PlanetComponentQueryParamKey } from 'constants/ogame/planet-component';
+import { Components, ComponentQueryParamKey } from '@app/constants/ogame/component';
 
-export function getPlanetComponentQueryParam(component: PlanetComponent) {
-  return `${PlanetComponentQueryParamKey}=${component}`;
+export function getComponentQueryParam(component: Components) {
+  return `${ComponentQueryParamKey}=${component}`;
 }

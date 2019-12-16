@@ -1,62 +1,55 @@
-export type PlanetFacilityType = 'level' | 'number';
+import { IOGameEntity } from '@app/interfaces/ogame';
 
-export interface IPlanetFacility {
-  type: PlanetFacilityType;
-  key: string;
-  selector: string;
-  label: string;
-}
-
-export const RoboticsFactory: IPlanetFacility = {
+export const RoboticsFactory: IOGameEntity = {
   type: 'level',
   key: 'roboticsFactory',
   selector: 'span.roboticsFactory',
   label: 'Robotics Factory',
 };
 
-export const Shipyard: IPlanetFacility = {
+export const Shipyard: IOGameEntity = {
   type: 'level',
   key: 'shipyard',
   selector: 'span.shipyard',
   label: 'Shipyard',
 };
 
-export const ResearchLaboratory: IPlanetFacility = {
+export const ResearchLaboratory: IOGameEntity = {
   type: 'level',
   key: 'researchLaboratory',
   selector: 'span.researchLaboratory',
   label: 'Research Laboratory',
 };
 
-export const AllianceDepot: IPlanetFacility = {
+export const AllianceDepot: IOGameEntity = {
   type: 'level',
   key: 'allianceDepot',
   selector: 'span.allianceDepot',
   label: 'Alliance Depot',
 };
 
-export const MissileSilo: IPlanetFacility = {
+export const MissileSilo: IOGameEntity = {
   type: 'level',
   key: 'missileSilo',
   selector: 'span.missileSilo',
   label: 'Missile Silo',
 };
 
-export const NaniteFactory: IPlanetFacility = {
+export const NaniteFactory: IOGameEntity = {
   type: 'level',
   key: 'naniteFactory',
   selector: 'span.naniteFactory',
   label: 'Nanite Factory',
 };
 
-export const Terraformer: IPlanetFacility = {
+export const Terraformer: IOGameEntity = {
   type: 'level',
   key: 'terraformer',
   selector: 'span.terraformer',
   label: 'Terraformer',
 };
 
-export const RepairDock: IPlanetFacility = {
+export const RepairDock: IOGameEntity = {
   type: 'level',
   key: 'repairDock',
   selector: 'span.repairDock',

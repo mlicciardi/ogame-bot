@@ -66,7 +66,7 @@ export const SolarSatellite: IOGameEntity = {
   requiredDeuterium: 500,
 };
 
-export const PlanetSupplies = {
+export const MoonSupplies = {
   MetalMine,
   CrystalMine,
   DeuteriumSynthesizer,
@@ -78,4 +78,4 @@ export const PlanetSupplies = {
   SolarSatellite,
 };
 
-export default PlanetSupplies;
+export default MoonSupplies;
