@@ -1,5 +1,5 @@
 import { IOGameEntity } from '@app/interfaces/ogame';
-import { OGameEntityType } from '@app/constants/ogame/types';
+import { OGameEntityType } from '@app/constants/ogame/entity-types';
 
 export const FighterLight: IOGameEntity = {
   type: OGameEntityType.Amount,
