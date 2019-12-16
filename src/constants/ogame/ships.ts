@@ -175,19 +175,19 @@ export const Ships = {
   FighterHeavy,
   Cruiser,
   Battleship,
-  Interceptor,
+  Battlecruiser,
   Bomber,
   Destroyer,
   Deathstar,
   Reaper,
-  Explorer,
+  Pathfinder,
   TransporterSmall,
   TransporterLarge,
   ColonyShip,
   Recycler,
   EspionageProbe,
   SolarSatellite,
-  Resbuggy,
+  Crawler,
 };
 
 export default Ships;
