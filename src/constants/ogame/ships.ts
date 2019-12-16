@@ -1,7 +1,7 @@
-import { IOGameEntity } from '@app/interfaces/ogame';
+import { IEntity } from '@app/interfaces/common';
 import { OGameEntityType } from '@app/constants/ogame/entity-types';
 
-export const FighterLight: IOGameEntity = {
+export const FighterLight: IEntity = {
   type: OGameEntityType.Amount,
   key: 'fighterLight',
   label: 'Fighter Light',
@@ -13,7 +13,7 @@ export const FighterLight: IOGameEntity = {
   requiredDeuterium: 0,
 };
 
-export const FighterHeavy: IOGameEntity = {
+export const FighterHeavy: IEntity = {
   type: OGameEntityType.Amount,
   key: 'fighterHeavy',
   label: 'Fighter Heavy',
@@ -25,7 +25,7 @@ export const FighterHeavy: IOGameEntity = {
   requiredDeuterium: 0,
 };
 
-export const Cruiser: IOGameEntity = {
+export const Cruiser: IEntity = {
   type: OGameEntityType.Amount,
   key: 'cruiser',
   label: 'Cruiser',
@@ -37,7 +37,7 @@ export const Cruiser: IOGameEntity = {
   requiredDeuterium: 2000,
 };
 
-export const Battleship: IOGameEntity = {
+export const Battleship: IEntity = {
   type: OGameEntityType.Amount,
   key: 'battleship',
   label: 'Battleship',
@@ -49,7 +49,7 @@ export const Battleship: IOGameEntity = {
   requiredDeuterium: 0,
 };
 
-export const Battlecruiser: IOGameEntity = {
+export const Battlecruiser: IEntity = {
   type: OGameEntityType.Amount,
   key: 'interceptor',
   label: 'Battlecruiser',
@@ -61,7 +61,7 @@ export const Battlecruiser: IOGameEntity = {
   requiredDeuterium: 15000,
 };
 
-export const Bomber: IOGameEntity = {
+export const Bomber: IEntity = {
   type: OGameEntityType.Amount,
   key: 'bomber',
   label: 'Bomber',
@@ -73,7 +73,7 @@ export const Bomber: IOGameEntity = {
   requiredDeuterium: 15000,
 };
 
-export const Destroyer: IOGameEntity = {
+export const Destroyer: IEntity = {
   type: OGameEntityType.Amount,
   key: 'destroyer',
   label: 'Destroyer',
@@ -85,7 +85,7 @@ export const Destroyer: IOGameEntity = {
   requiredDeuterium: 15000,
 };
 
-export const Deathstar: IOGameEntity = {
+export const Deathstar: IEntity = {
   type: OGameEntityType.Amount,
   key: 'deathstar',
   label: 'Deathstar',
@@ -97,7 +97,7 @@ export const Deathstar: IOGameEntity = {
   requiredDeuterium: 1000000,
 };
 
-export const Reaper: IOGameEntity = {
+export const Reaper: IEntity = {
   type: OGameEntityType.Amount,
   key: 'reaper',
   label: 'Reaper',
@@ -109,7 +109,7 @@ export const Reaper: IOGameEntity = {
   requiredDeuterium: 20000,
 };
 
-export const Pathfinder: IOGameEntity = {
+export const Pathfinder: IEntity = {
   type: OGameEntityType.Amount,
   key: 'explorer',
   label: 'Pathfinder',
@@ -121,7 +121,7 @@ export const Pathfinder: IOGameEntity = {
   requiredDeuterium: 8000,
 };
 
-export const TransporterSmall: IOGameEntity = {
+export const TransporterSmall: IEntity = {
   type: OGameEntityType.Amount,
   key: 'transporterSmall',
   label: 'Transporter Small',
@@ -133,7 +133,7 @@ export const TransporterSmall: IOGameEntity = {
   requiredDeuterium: 0,
 };
 
-export const TransporterLarge: IOGameEntity = {
+export const TransporterLarge: IEntity = {
   type: OGameEntityType.Amount,
   key: 'transporterLarge',
   label: 'Transporter Large',
@@ -145,7 +145,7 @@ export const TransporterLarge: IOGameEntity = {
   requiredDeuterium: 0,
 };
 
-export const ColonyShip: IOGameEntity = {
+export const ColonyShip: IEntity = {
   type: OGameEntityType.Amount,
   key: 'colonyShip',
   label: 'Colony Ship',
@@ -157,7 +157,7 @@ export const ColonyShip: IOGameEntity = {
   requiredDeuterium: 10000,
 };
 
-export const Recycler: IOGameEntity = {
+export const Recycler: IEntity = {
   type: OGameEntityType.Amount,
   key: 'recycler',
   label: 'Recycler',
@@ -169,7 +169,7 @@ export const Recycler: IOGameEntity = {
   requiredDeuterium: 2000,
 };
 
-export const EspionageProbe: IOGameEntity = {
+export const EspionageProbe: IEntity = {
   type: OGameEntityType.Amount,
   key: 'espionageProbe',
   label: 'Espionage Probe',
@@ -181,7 +181,7 @@ export const EspionageProbe: IOGameEntity = {
   requiredDeuterium: 0,
 };
 
-export const SolarSatellite: IOGameEntity = {
+export const SolarSatellite: IEntity = {
   type: OGameEntityType.Amount,
   key: 'solarSatellite',
   label: 'Solar Satellite',
@@ -193,7 +193,7 @@ export const SolarSatellite: IOGameEntity = {
   requiredDeuterium: 500,
 };
 
-export const Crawler: IOGameEntity = {
+export const Crawler: IEntity = {
   type: OGameEntityType.Amount,
   key: 'resbuggy',
   label: 'Crawler',

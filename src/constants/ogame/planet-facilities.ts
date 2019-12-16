@@ -1,7 +1,7 @@
-import { IOGameEntity } from '@app/interfaces/ogame';
+import { IEntity } from '@app/interfaces/common';
 import { OGameEntityType } from '@app/constants/ogame/entity-types';
 
-export const RoboticsFactory: IOGameEntity = {
+export const RoboticsFactory: IEntity = {
   type: OGameEntityType.Level,
   key: 'roboticsFactory',
   label: 'Robotics Factory',
@@ -10,7 +10,7 @@ export const RoboticsFactory: IOGameEntity = {
   attribute: 'data-value',
 };
 
-export const Shipyard: IOGameEntity = {
+export const Shipyard: IEntity = {
   type: OGameEntityType.Level,
   key: 'shipyard',
   label: 'Shipyard',
@@ -19,7 +19,7 @@ export const Shipyard: IOGameEntity = {
   attribute: 'data-value',
 };
 
-export const ResearchLaboratory: IOGameEntity = {
+export const ResearchLaboratory: IEntity = {
   type: OGameEntityType.Level,
   key: 'researchLaboratory',
   label: 'Research Laboratory',
@@ -28,7 +28,7 @@ export const ResearchLaboratory: IOGameEntity = {
   attribute: 'data-value',
 };
 
-export const AllianceDepot: IOGameEntity = {
+export const AllianceDepot: IEntity = {
   type: OGameEntityType.Level,
   key: 'allianceDepot',
   label: 'Alliance Depot',
@@ -37,7 +37,7 @@ export const AllianceDepot: IOGameEntity = {
   attribute: 'data-value',
 };
 
-export const MissileSilo: IOGameEntity = {
+export const MissileSilo: IEntity = {
   type: OGameEntityType.Level,
   key: 'missileSilo',
   label: 'Missile Silo',
@@ -46,7 +46,7 @@ export const MissileSilo: IOGameEntity = {
   attribute: 'data-value',
 };
 
-export const NaniteFactory: IOGameEntity = {
+export const NaniteFactory: IEntity = {
   type: OGameEntityType.Level,
   key: 'naniteFactory',
   label: 'Nanite Factory',
@@ -55,7 +55,7 @@ export const NaniteFactory: IOGameEntity = {
   attribute: 'data-value',
 };
 
-export const Terraformer: IOGameEntity = {
+export const Terraformer: IEntity = {
   type: OGameEntityType.Level,
   key: 'terraformer',
   label: 'Terraformer',
@@ -64,7 +64,7 @@ export const Terraformer: IOGameEntity = {
   attribute: 'data-value',
 };
 
-export const RepairDock: IOGameEntity = {
+export const RepairDock: IEntity = {
   type: OGameEntityType.Level,
   key: 'repairDock',
   label: 'Repair Dock',

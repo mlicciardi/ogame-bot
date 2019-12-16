@@ -1,7 +1,7 @@
-import { IOGameEntity } from '@app/interfaces/ogame';
+import { IEntity } from '@app/interfaces/common';
 import { OGameEntityType } from '@app/constants/ogame/entity-types';
 
-export const RocketLauncher: IOGameEntity = {
+export const RocketLauncher: IEntity = {
   type: OGameEntityType.Amount,
   key: 'rocketLauncher',
   label: 'Rocket Launcher',
@@ -12,7 +12,7 @@ export const RocketLauncher: IOGameEntity = {
   requiredCrystal: 0,
   requiredDeuterium: 0,
 };
-export const LaserCannonLight: IOGameEntity = {
+export const LaserCannonLight: IEntity = {
   type: OGameEntityType.Amount,
   key: 'laserCannonLight',
   label: 'Laser Cannon Light',
@@ -23,7 +23,7 @@ export const LaserCannonLight: IOGameEntity = {
   requiredCrystal: 500,
   requiredDeuterium: 0,
 };
-export const LaserCannonHeavy: IOGameEntity = {
+export const LaserCannonHeavy: IEntity = {
   type: OGameEntityType.Amount,
   key: 'laserCannonHeavy',
   label: 'Laser Cannon Heavy',
@@ -34,7 +34,7 @@ export const LaserCannonHeavy: IOGameEntity = {
   requiredCrystal: 2000,
   requiredDeuterium: 0,
 };
-export const GaussCannon: IOGameEntity = {
+export const GaussCannon: IEntity = {
   type: OGameEntityType.Amount,
   key: 'gaussCannon',
   label: 'Gauss Cannon',
@@ -45,7 +45,7 @@ export const GaussCannon: IOGameEntity = {
   requiredCrystal: 15000,
   requiredDeuterium: 2000,
 };
-export const IonCannon: IOGameEntity = {
+export const IonCannon: IEntity = {
   type: OGameEntityType.Amount,
   key: 'ionCannon',
   label: 'Ion Cannon',
@@ -56,7 +56,7 @@ export const IonCannon: IOGameEntity = {
   requiredCrystal: 3000,
   requiredDeuterium: 0,
 };
-export const PlasmaCannon: IOGameEntity = {
+export const PlasmaCannon: IEntity = {
   type: OGameEntityType.Amount,
   key: 'plasmaCannon',
   label: 'Plasma Cannon',
@@ -67,7 +67,7 @@ export const PlasmaCannon: IOGameEntity = {
   requiredCrystal: 50000,
   requiredDeuterium: 30000,
 };
-export const ShieldDomeSmall: IOGameEntity = {
+export const ShieldDomeSmall: IEntity = {
   type: OGameEntityType.Amount,
   key: 'shieldDomeSmall',
   label: 'Shield Dome Small',
@@ -78,7 +78,7 @@ export const ShieldDomeSmall: IOGameEntity = {
   requiredCrystal: 10000,
   requiredDeuterium: 0,
 };
-export const ShieldDomeLarge: IOGameEntity = {
+export const ShieldDomeLarge: IEntity = {
   type: OGameEntityType.Amount,
   key: 'shieldDomeLarge',
   label: 'Shield Dome Large',
@@ -89,7 +89,7 @@ export const ShieldDomeLarge: IOGameEntity = {
   requiredCrystal: 50000,
   requiredDeuterium: 0,
 };
-export const MissileInterceptor: IOGameEntity = {
+export const MissileInterceptor: IEntity = {
   type: OGameEntityType.Amount,
   key: 'missileInterceptor',
   label: 'Missile Interceptor',
@@ -100,7 +100,7 @@ export const MissileInterceptor: IOGameEntity = {
   requiredCrystal: 0,
   requiredDeuterium: 2000,
 };
-export const MissileInterplanetary: IOGameEntity = {
+export const MissileInterplanetary: IEntity = {
   type: OGameEntityType.Amount,
   key: 'missileInterplanetary',
   label: 'Missile Interplanetary',

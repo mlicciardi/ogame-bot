@@ -6,7 +6,8 @@ import { launch } from 'puppeteer';
 import { loadBrowserOptions } from '@app/functions/puppeteer/load-browser-options';
 
 import { login } from '@app/modules/login';
-import { fetchPlanetIds } from '@app/modules/empire';
+
+import { Empire } from '@app/models/empire';
 
 config({ path: resolve(__dirname, '../.env') });
 
@@ -20,10 +21,9 @@ config({ path: resolve(__dirname, '../.env') });
     await browser.close();
   } else {
     console.info('Start...');
-
-    const ids = await fetchPlanetIds(page);
-    console.info(ids);
-
+    const empire = new Empire();
+    await empire.load(page);
+    console.debug(empire);
     console.info('Done!');
     // browser.close();
   }

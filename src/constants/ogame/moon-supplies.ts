@@ -1,7 +1,7 @@
-import { IOGameEntity } from '@app/interfaces/ogame';
+import { IEntity } from '@app/interfaces/common';
 import { OGameEntityType } from '@app/constants/ogame/entity-types';
 
-export const MetalMine: IOGameEntity = {
+export const MetalMine: IEntity = {
   type: OGameEntityType.Level,
   key: 'metalMine',
   label: 'Metal Mine',
@@ -10,7 +10,7 @@ export const MetalMine: IOGameEntity = {
   attribute: 'data-value',
 };
 
-export const CrystalMine: IOGameEntity = {
+export const CrystalMine: IEntity = {
   type: OGameEntityType.Level,
   key: 'crystalMine',
   label: 'Crystal Mine',
@@ -19,7 +19,7 @@ export const CrystalMine: IOGameEntity = {
   attribute: 'data-value',
 };
 
-export const DeuteriumSynthesizer: IOGameEntity = {
+export const DeuteriumSynthesizer: IEntity = {
   type: OGameEntityType.Level,
   key: 'deuteriumSynthesizer',
   label: 'Deuterium Synthesizer',
@@ -28,7 +28,7 @@ export const DeuteriumSynthesizer: IOGameEntity = {
   attribute: 'data-value',
 };
 
-export const metalStorage: IOGameEntity = {
+export const metalStorage: IEntity = {
   type: OGameEntityType.Level,
   key: 'metalStorage',
   label: 'metalStorage',
@@ -37,7 +37,7 @@ export const metalStorage: IOGameEntity = {
   attribute: 'data-value',
 };
 
-export const crystalStorage: IOGameEntity = {
+export const crystalStorage: IEntity = {
   type: OGameEntityType.Level,
   key: 'crystalStorage',
   label: 'Crystal Storage',
@@ -46,7 +46,7 @@ export const crystalStorage: IOGameEntity = {
   attribute: 'data-value',
 };
 
-export const deuteriumStorage: IOGameEntity = {
+export const deuteriumStorage: IEntity = {
   type: OGameEntityType.Level,
   key: 'deuteriumStorage',
   label: 'Deuterium Storage',
@@ -55,7 +55,7 @@ export const deuteriumStorage: IOGameEntity = {
   attribute: 'data-value',
 };
 
-export const SolarPlant: IOGameEntity = {
+export const SolarPlant: IEntity = {
   type: OGameEntityType.Level,
   key: 'solarPlant',
   label: 'Solar Plant',
@@ -64,7 +64,7 @@ export const SolarPlant: IOGameEntity = {
   attribute: 'data-value',
 };
 
-export const FusionPlant: IOGameEntity = {
+export const FusionPlant: IEntity = {
   type: OGameEntityType.Level,
   key: 'fusionPlant',
   label: 'Fusion Plant',

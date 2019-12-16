@@ -1,7 +1,7 @@
-import { IOGameEntity } from '@app/interfaces/ogame';
+import { IEntity } from '@app/interfaces/common';
 import { OGameEntityType } from '@app/constants/ogame/entity-types';
 
-export const RoboticsFactory: IOGameEntity = {
+export const RoboticsFactory: IEntity = {
   type: OGameEntityType.Level,
   key: 'roboticsFactory',
   label: 'Robotics Factory',
@@ -10,7 +10,7 @@ export const RoboticsFactory: IOGameEntity = {
   attribute: 'data-value',
 };
 
-export const Shipyard: IOGameEntity = {
+export const Shipyard: IEntity = {
   type: OGameEntityType.Level,
   key: 'shipyard',
   label: 'Shipyard',
@@ -19,7 +19,7 @@ export const Shipyard: IOGameEntity = {
   attribute: 'data-value',
 };
 
-export const Moonbase: IOGameEntity = {
+export const Moonbase: IEntity = {
   type: OGameEntityType.Level,
   key: 'moonbase',
   label: 'Moonbase',
@@ -28,7 +28,7 @@ export const Moonbase: IOGameEntity = {
   attribute: 'data-value',
 };
 
-export const SensorPhalanx: IOGameEntity = {
+export const SensorPhalanx: IEntity = {
   type: OGameEntityType.Level,
   key: 'sensorPhalanx',
   label: 'Sensor Phalanx',
@@ -37,7 +37,7 @@ export const SensorPhalanx: IOGameEntity = {
   attribute: 'data-value',
 };
 
-export const JumpGate: IOGameEntity = {
+export const JumpGate: IEntity = {
   type: OGameEntityType.Level,
   key: 'jumpGate',
   label: 'Jump Gate',
