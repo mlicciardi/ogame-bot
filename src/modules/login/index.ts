@@ -29,3 +29,13 @@ export async function login(browser: Browser, url: string, usr: string, pwd: str
 
   return page;
 }
+
+export async function loadMock(browser: Browser, workdir: string, path: string): Promise<Page> {
+  console.log(`Loading mock: file://${workdir}${path}`);
+
+  let [main] = await getBrowserPages(browser);
+
+  await main.goto(`file://${workdir}${path}`, { waitUntil: 'load' });
+
+  return main;
+}
