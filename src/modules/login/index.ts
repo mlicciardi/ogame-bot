@@ -3,7 +3,9 @@ import { Browser, Page } from 'puppeteer';
 import { getBrowserPages } from 'functions/puppeteer/get-browser-pages';
 import { performClickOnElement } from 'utils/puppeteer/perform-click';
 
-export async function login(browser: Browser, url: string, usr: string, pwd: string): Promise<Page> {
+export async function login(url: string, usr: string, pwd: string): Promise<Page> {
+  const browser: Browser = process.env['browser'] as Browser;
+
   console.log('Logging in...');
 
   let [main, page] = await getBrowserPages(browser);
@@ -30,12 +32,9 @@ export async function login(browser: Browser, url: string, usr: string, pwd: str
   return page;
 }
 
-export async function loadMock(browser: Browser, workdir: string, path: string): Promise<Page> {
-  console.log(`Loading mock: file://${workdir}${path}`);
-
+export async function loadMock(workdir: string, path: string): Promise<Page> {
+  const browser = process.env.browser;
   let [main] = await getBrowserPages(browser);
-
   await main.goto(`file://${workdir}${path}`, { waitUntil: 'load' });
-
   return main;
 }

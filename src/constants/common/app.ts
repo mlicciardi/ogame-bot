@@ -13,3 +13,7 @@ export enum MockFleetMovement {
   STEP_1_1 = '/fleet-movement/fleet-movement-1.1.htm',
   STEP_1_2 = '/fleet-movement/fleet-movement-1.2.htm',
 }
+
+export enum MockFleetDispatch {
+  STEP_1_1 = '/fleet-dispatch/fleet-dispatch-1.1.htm',
+}

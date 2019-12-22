@@ -10,7 +10,7 @@ export async function fetchPlanetIds(page: Page): Promise<Array<string>> {
 }
 
 export async function navigatePlanets(page: Page): Promise<void> {
-  const planetIds = await fetchPlanetIds;
+  const planetIds = await fetchPlanetIds(page);
 
   for (let i = 0; i < planetIds.length; i++) {
     const id = planetIds[i];
